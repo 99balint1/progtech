@@ -5,7 +5,7 @@ leltárját tartja számon, termékekről (megnevezés, vonalkód, ár) tárolun
 Használt tervezési minták:
 MVC - (Model - Termék, View - GUI, Controller - Adatbázis)
 Observer - Lista, módosítás esetén a program az adatbázisnak pusholja a változást
-Singletone - adatbátiskapcsolat
+Singletone - adatbáziskapcsolat
 
 Unit tesztek:
 Termék felvétele(ADD),
