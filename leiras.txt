@@ -1,0 +1,14 @@
+Egy olyan java programot szeretnék létrehozni, amely egy bolt, vagy üzlet
+leltárját tartja számon, termékekről (megnevezés, vonalkód, ár) tárolunk adatokat,
+és kitudjuk pdf-be generálni egy termék adatait.
+
+Használt tervezési minták:
+MVC
+Observer
+Singletone
+
+Unit tesztek:
+Termék felvétele(ADD),
+Termék adatainak módosítása(UPDATE),
+Termék törlése,
+Termék adatlapjának pdf-be generálása.
