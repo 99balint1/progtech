@@ -3,12 +3,12 @@ leltárját tartja számon, termékekről (megnevezés, vonalkód, ár) tárolun
 és kitudjuk pdf-be generálni egy termék adatait.
 
 Használt tervezési minták:
-MVC
-Observer
-Singletone
+MVC - (Model - Termék, View - GUI, Controller - Adatbázis)
+Observer - Lista, módosítás esetén a program az adatbázisnak pusholja a változást
+Singletone - A gyűjtő osztályt csak egyszer lehessen példányosítani
 
 Unit tesztek:
 Termék felvétele(ADD),
 Termék adatainak módosítása(UPDATE),
-Termék törlése,
+Termék törlése(DELETE),
 Termék adatlapjának pdf-be generálása.
