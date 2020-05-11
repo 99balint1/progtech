@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchor" fx:id="anchor" prefHeight="650.0" prefWidth="800" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="products.ViewController">
+    <children>
+        <SplitPane id="mainSplit" fx:id="mainSplit" dividerPositions="0.25" layoutY="32.0" prefHeight="568.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="32.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <StackPane id="menuPane" fx:id="menuPane" layoutX="14.0" layoutY="48.0" prefHeight="566.0" prefWidth="159.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                    <children>
+                        <Pane id="exportPane" fx:id="exportPane" layoutX="49.0" layoutY="35.0" prefHeight="610.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <Button id="exportButton" fx:id="exportButton" onAction="#exportList" layoutX="180.0" layoutY="192.0" mnemonicParsing="false" text="PDF mentése" />
+                                <TextField id="inputExportName" fx:id="inputExportName" layoutX="93.0" layoutY="155.0" prefHeight="25.0" prefWidth="259.0" />
+                                <Label layoutX="116.0" layoutY="14.0" text="PDF létrehozása">
+                                    <font>
+                                        <Font name="Gadugi" size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="186.0" layoutY="122.0" text="Fájl neve:">
+                                    <font>
+                                        <Font name="Gadugi" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children></Pane>
+                        <Pane id="productPane" fx:id="productPane" layoutX="59.0" layoutY="45.0" prefHeight="610.0" prefWidth="445.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <TableView id="table" fx:id="table" editable="true" layoutY="6.0" prefHeight="460.0" prefWidth="580.0">
+                                    <placeholder>
+                                        <Label text="Nincs adat." />
+                                    </placeholder>
+                                    <columns>
+                                    </columns>
+                                    <columns>
+                                    </columns>
+                                </TableView>
+                                <TextField id="inputMegnevezes" fx:id="inputMegnevezes" layoutX="100.0" layoutY="482.0" prefHeight="25.0" prefWidth="175.0" promptText="A termék megnevezése" />
+                                <TextField id="inputVonalkod" fx:id="inputVonalkod" layoutX="100.0" layoutY="514.0" prefHeight="25.0" prefWidth="175.0" promptText="A termék vonalkódja" />
+                                <TextField id="inputAr" fx:id="inputAr" layoutX="100.0" layoutY="545.0" prefHeight="25.0" prefWidth="175.0" promptText="A termék ára" />
+                                <TextField id="inputDarab" fx:id="inputDarab" layoutX="100.0" layoutY="575.0" prefHeight="25.0" prefWidth="175.0" promptText="Darabszám" />
+                                <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="487.0" prefHeight="17.0" prefWidth="72.0" text="Megnevezés:" />
+                                <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="519.0" prefHeight="17.0" prefWidth="72.0" text="Vonalkód:" />
+                                <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="550.0" prefHeight="17.0" prefWidth="72.0" text="Ár:" />
+                                <Label alignment="CENTER_RIGHT" layoutX="20.0" layoutY="580.0" prefHeight="17.0" prefWidth="72.0" text="Darabszám:" />
+                                <Button id="addNewProductButton" fx:id="addNewProductButton" onAction="#addProduct" layoutX="286.0" layoutY="530.0" mnemonicParsing="false" text="Új termék hozzáadása" />
+                            </children>
+                        </Pane>
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
