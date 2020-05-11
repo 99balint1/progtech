@@ -1,6 +1,6 @@
 Egy olyan java programot szeretnék létrehozni, amely egy bolt, vagy üzlet
-leltárját tartja számon, termékekről (megnevezés, vonalkód, ár) tárolunk adatokat,
-és kitudjuk pdf-be generálni egy termék adatait.
+leltárját tartja számon, termékekről (megnevezés, vonalkód, ár, darab) tárolunk adatokat,
+és kitudjuk pdf-be generálni egy termékek adatait (leltárt tudunk készíteni).
 
 Használt tervezési minták:
 MVC - (Model - Termék, View - GUI, Controller - Adatbázis)
@@ -11,4 +11,5 @@ Unit tesztek:
 Termék felvétele(ADD),
 Termék adatainak módosítása(UPDATE),
 Termék törlése(DELETE),
-Termék adatlapjának pdf-be generálása.
+Leltár készítése pdf-be.
+Modell osztály tesztelése
