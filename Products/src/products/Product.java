@@ -9,56 +9,50 @@ public class Product {
     private final SimpleStringProperty megnevezes;
     private final SimpleStringProperty vonalkod;
     private final SimpleStringProperty ar;
-    private final SimpleStringProperty id;
+    private final SimpleStringProperty darab;
     
     public Product() {
         this.megnevezes = new SimpleStringProperty("");
         this.vonalkod = new SimpleStringProperty("");
         this.ar = new SimpleStringProperty("");
-        this.id = new SimpleStringProperty("");
+        this.darab = new SimpleStringProperty("");
     }
  
-    public Product(String vonalkod, String megnevezes, String ar) {
+    public Product(String megnevezes, String vonalkod, String ar, String darab) {
         this.vonalkod = new SimpleStringProperty(vonalkod);
         this.megnevezes = new SimpleStringProperty(megnevezes);
         this.ar = new SimpleStringProperty(ar);
-        this.id = new SimpleStringProperty("");
+        this.darab = new SimpleStringProperty(darab);
     }
-    
-    public Product(Integer id, String vonalkod, String megnevezes, String ar) {
-        this.vonalkod = new SimpleStringProperty(vonalkod);
-        this.megnevezes = new SimpleStringProperty(megnevezes);
-        this.ar = new SimpleStringProperty(ar);
-        this.id = new SimpleStringProperty(String.valueOf(id));
-    }
-    
-    public String getFirstName() {
+
+    public String getMegnevezes() {
         return megnevezes.get();
     }
-    public void setFirstName(String fName) {
-        megnevezes.set(fName);
+    public void setMegnevezes(String Megnevezes) {
+        megnevezes.set(Megnevezes);
     }
         
     public String getVonalkod() {
         return vonalkod.get();
     }
-    public void setVonalkod(String fName) {
-        vonalkod.set(fName);
+    public void setVonalkod(String Vonalkod) {
+        vonalkod.set(Vonalkod);
     }
     
     public String getAr() {
         return ar.get();
     }
-    public void setAr(String fName) {
-        ar.set(fName);
+    public void setAr(String Ar) {
+        ar.set(Ar);
+    }
+    public String getDarab(){return darab.get();}
+    public void setDarab(String Darab){
+        darab.set(Darab);
+    }
+    @Override
+    public String toString(){
+        return String.format("Megnevezes: " + megnevezes.get()+ " Vonalkód: " + vonalkod.get()+" Ár: " + ar.get()+ " Darabszám: "+darab.get());
     }
 
-    public String getId(){
-        return id.get();
-    }
-    
-    public void setId(String fId){
-        id.set(fId);
-    }
     
 }
